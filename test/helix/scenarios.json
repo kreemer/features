@@ -1,0 +1,10 @@
+{
+    "install_helix": {
+        "image": "mcr.microsoft.com/devcontainers/base",
+        "features": {
+            "helix": {
+                "version": "latest"
+            }
+        }
+    }
+}
