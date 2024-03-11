@@ -1,6 +1,6 @@
 {
   "id": "stow",
-  "version": "1.0",
+  "version": "1.0.0",
   "name": "Stow",
   "documentationURL": "https://github.com/kreemer/features/tree/main/src/stow",
   "options": {
