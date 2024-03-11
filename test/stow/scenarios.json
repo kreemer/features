@@ -1,0 +1,10 @@
+{
+    "install_stow": {
+        "image": "mcr.microsoft.com/devcontainers/base",
+        "features": {
+            "stow": {
+                "version": "latest"
+            }
+        }
+    }
+}
