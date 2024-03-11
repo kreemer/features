@@ -6,7 +6,7 @@ set -e
 source dev-container-features-test-lib
 
 # Definition specific tests
-check "version" stow version
+check "version" stow -V
 
 # Report result
 reportResults
