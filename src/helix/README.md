@@ -1,5 +1,5 @@
 
-# Stow (stow)
+# Helix (helix)
 
 
 
@@ -7,7 +7,7 @@
 
 ```json
 "features": {
-    "ghcr.io/kreemer/features/stow:1": {}
+    "ghcr.io/kreemer/features/helix:1": {}
 }
 ```
 
@@ -26,4 +26,4 @@ This Feature should work on recent versions of Debian/Ubuntu-based distributions
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/kreemer/features/blob/main/src/stow/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/kreemer/features/blob/main/src/helix/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
