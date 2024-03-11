@@ -24,6 +24,8 @@ jobs:
 
       - name: Create a PR for Documentation
         id: push_image_info
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -e
           echo "Start."
