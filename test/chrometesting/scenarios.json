@@ -1,0 +1,10 @@
+{
+    "install_chrometesting": {
+        "image": "mcr.microsoft.com/devcontainers/base",
+        "features": {
+            "chrometesting": {
+                "version": "latest"
+            }
+        }
+    }
+}
