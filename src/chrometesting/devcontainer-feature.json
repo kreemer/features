@@ -1,0 +1,19 @@
+{
+  "id": "chrometesting",
+  "version": "1.0.0",
+  "name": "Chrome Testing",
+  "documentationURL": "https://github.com/kreemer/features/tree/main/src/chrometesting",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "Stable"
+      ],
+      "default": "Stable",
+      "description": "Select or enter a version."
+    }
+  },
+	"installsAfter": [
+      "ghcr.io/devcontainers/features/common-utils"
+  ]
+}
