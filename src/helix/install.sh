@@ -29,14 +29,29 @@ apt_get_update()
 
 
 # Insall Hugo if it's missing
-if ! stow -V &> /dev/null ; then
+if ! hx -V &> /dev/null ; then
 	  echo "Installing Helix..."
 		apt_get_update
-	  apt-get -y install --no-install-recommends software-properties-common
+	  apt-get -y install --no-install-recommends jq curl tar xz-utils
 
-    add-apt-repository ppa:maveonair/helix-editor
-    apt-get update -y
-    apt-get -y install --no-install-recommends helix
+    if [[ "$VERSION" == "latest" ]]; then
+      VERSION=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/helix-editor/helix/releases/latest | jq -r .tag_name )
+    fi
+
+    IDENTIFIER="helix-${VERSION}-x86_64-linux"
+    IDENTIFIER_ARCHIVE="${IDENTIFIER}.tar.xz"
+
+    DOWNLOAD_URL=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/helix-editor/helix/releases/tags/${VERSION}" | \
+       jq -r '.assets | map(select(.name=="'"$IDENTIFIER_ARCHIVE"'"))[0].browser_download_url')
+
+    echo "Downloading helix from: ${DOWNLOAD_URL}"
+
+    curl -s -L -o "/tmp/${IDENTIFIER_ARCHIVE}" "${DOWNLOAD_URL}"
+    tar --xz -xf "/tmp/${IDENTIFIER_ARCHIVE}" -C /tmp
+    mv "/tmp/${IDENTIFIER}" /opt/helix
+    ln -s /opt/helix/hx /usr/local/bin/hx
+
+    rm -f "/tmp/${IDENTIFIER_ARCHIVE}"
 fi
 
 # Clean up
