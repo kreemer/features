@@ -12,6 +12,7 @@ jobs:
       matrix:
         features: [
             "stow",
+            "chrometesting"
         ]
         baseImage:
           [
@@ -21,6 +22,7 @@ jobs:
             "debian:12",
             "mcr.microsoft.com/devcontainers/base:ubuntu",
             "mcr.microsoft.com/devcontainers/base:debian",
+            "mcr.microsoft.com/devcontainers/base:noble"
           ]
     steps:
       - uses: actions/checkout@v3
@@ -38,6 +40,7 @@ jobs:
       matrix:
         features: [
             "stow",
+            "chrometesting"
         ]
     steps:
       - uses: actions/checkout@v3

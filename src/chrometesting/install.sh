@@ -21,7 +21,7 @@ if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
     apt-get update -y
 fi
 
-apt-get install -y curl wget unzip xvfb jq ca-certificates fonts-liberation lsb-release xdg-utils libnss3 libasound2-dev
+apt-get install -y curl wget unzip jq
 
 
 cd /tmp
@@ -31,6 +31,12 @@ CHROMEDRIVER_URL=$(curl -s "https://googlechromelabs.github.io/chrome-for-testin
 wget $CHROME_URL
 unzip chrome-linux64.zip
 mv chrome-linux64 /opt/chrome
+
+# Install dependencies
+while read pkg; do
+  apt satisfy -y --no-install-recommends "${pkg}";
+done < /opt/chrome/deb.deps;
+
 chmod +x /opt/chrome/chrome
 ln -s /opt/chrome/chrome /usr/local/bin/chrome
 

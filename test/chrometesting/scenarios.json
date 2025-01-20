@@ -1,6 +1,14 @@
 {
-    "install_chrometesting": {
+    "install_base_chrometesting": {
         "image": "mcr.microsoft.com/devcontainers/base",
+        "features": {
+            "chrometesting": {
+                "version": "latest"
+            }
+        }
+    },
+    "install_noble_chrometesting": {
+        "image": "mcr.microsoft.com/devcontainers/base:noble",
         "features": {
             "chrometesting": {
                 "version": "latest"
