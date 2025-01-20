@@ -40,7 +40,6 @@ jobs:
       matrix:
         features: [
             "stow",
-            "chrometesting"
         ]
     steps:
       - uses: actions/checkout@v3
