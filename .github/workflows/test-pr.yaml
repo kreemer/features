@@ -31,7 +31,7 @@ jobs:
             "mcr.microsoft.com/devcontainers/base:debian",
           ]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
@@ -41,13 +41,13 @@ jobs:
 
   test-scenarios:
     needs: [detect-changes]
-    runs-on: devcontainer-image-builder-ubuntu
+    runs-on: ubuntu-latest
     continue-on-error: true
     strategy:
       matrix:
         features: ${{ fromJSON(needs.detect-changes.outputs.features) }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
