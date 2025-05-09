@@ -40,6 +40,11 @@ if ! ./marksman-linux-x64 --version &> /dev/null ; then
     DOWNLOAD_URL=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/artempyanykh/marksman/releases/tags/${VERSION}" | \
        jq -r '.assets | map(select(.name=="'"$IDENTIFIER"'"))[0].browser_download_url')
 
+    if [ -z "$DOWNLOAD_URL" ]; then
+        echo "Error: Unable to find download URL for $IDENTIFIER and version $VERSION"
+        exit 1
+    fi
+
     echo "Downloading marksman from: ${DOWNLOAD_URL}"
 
     curl -s -L -o "/tmp/${IDENTIFIER_ARCHIVE}" "${DOWNLOAD_URL}"
