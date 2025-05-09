@@ -34,7 +34,8 @@ if ! hx -V &> /dev/null ; then
 		apt_get_update
 	  apt-get -y install --no-install-recommends jq curl tar xz-utils ca-certificates libc6
 
-    if [[ "$VERSION" == "latest" ]]; then
+    if [[ "$VERSION" == "latest" || -z "$VERSION" ]]; then
+      echo "Fetching latest version..."
       VERSION=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/helix-editor/helix/releases/latest | jq -r .tag_name )
     fi
 
@@ -44,6 +45,12 @@ if ! hx -V &> /dev/null ; then
     DOWNLOAD_URL=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/helix-editor/helix/releases/tags/${VERSION}" | \
        jq -r '.assets | map(select(.name=="'"$IDENTIFIER_ARCHIVE"'"))[0].browser_download_url')
 
+
+    if [ -z "$DOWNLOAD_URL" ]; then
+        echo "Error: Unable to find download URL for $IDENTIFIER and version $VERSION"
+        exit 1
+    fi
+    
     echo "Downloading helix from: ${DOWNLOAD_URL}"
 
     curl -s -L -o "/tmp/${IDENTIFIER_ARCHIVE}" "${DOWNLOAD_URL}"

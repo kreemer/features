@@ -29,14 +29,10 @@ apt_get_update()
 if ! ./marksman-linux-x64 --version &> /dev/null ; then
 	  echo "Installing Marksman..."
 		apt_get_update
-	  apt-get -y install --no-install-recommends jq curl tar xz-utils ca-certificates libicu63
+	  apt-get -y install --no-install-recommends jq curl tar xz-utils ca-certificates
 
     if [[ "$VERSION" == "latest" || -z "$VERSION" ]]; then
       echo "Fetching latest version..."
-      
-      update-ca-certificates
-      curl -v -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/artempyanykh/marksman/releases/latest"
-      
       VERSION=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/artempyanykh/marksman/releases/latest" | jq -r .tag_name)
     fi
 
