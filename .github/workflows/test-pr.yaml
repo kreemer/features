@@ -13,6 +13,9 @@ jobs:
         with:
           filters: |
             stow: ./**/stow/**
+            helix: ./**/helix/**
+            chrometesting: ./**/chrometesting/**
+            marksman: ./**/marksman/**
 
   test:
     needs: [detect-changes]
@@ -23,9 +26,8 @@ jobs:
         features: ${{ fromJSON(needs.detect-changes.outputs.features) }}
         baseImage:
           [
-            "ubuntu:focal",
             "ubuntu:jammy",
-            "debian:11",
+            "ubuntu:noble",
             "debian:12",
             "mcr.microsoft.com/devcontainers/base:ubuntu",
             "mcr.microsoft.com/devcontainers/base:debian",

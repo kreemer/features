@@ -1,0 +1,19 @@
+{
+  "id": "marksman",
+  "version": "1.0.0",
+  "name": "Marksman",
+  "documentationURL": "https://github.com/kreemer/features/tree/main/src/marksman",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "latest"
+      ],
+      "default": "latest",
+      "description": "Select or enter a version."
+    }
+  },
+	"installsAfter": [
+      "ghcr.io/devcontainers/features/common-utils"
+  ]
+}
