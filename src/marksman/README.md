@@ -1,5 +1,5 @@
 
-# Chrome Testing (chrometesting)
+# Marksman (marksman)
 
 
 
@@ -7,7 +7,7 @@
 
 ```json
 "features": {
-    "ghcr.io/kreemer/features/chrometesting:1": {}
+    "ghcr.io/kreemer/features/marksman:1": {}
 }
 ```
 
@@ -15,11 +15,11 @@
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select or enter a version. | string | Stable |
+| version | Select or enter a version. | string | latest |
 
 ## About
 
-This feature installs [Chrome for testing](https://developer.chrome.com/blog/chrome-for-testing?hl=de) and a corresponding chromedriver. 
+This feature installs [Marksman](https://github.com/artempyanykh/marksman). 
 
 ## OS Support
 
@@ -30,4 +30,4 @@ This Feature should work on recent versions of Debian/Ubuntu-based distributions
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/kreemer/features/blob/main/src/chrometesting/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/kreemer/features/blob/main/src/marksman/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
