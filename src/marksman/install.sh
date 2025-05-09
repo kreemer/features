@@ -32,7 +32,7 @@ if ! ./marksman-linux-x64 --version &> /dev/null ; then
 	  apt-get -y install --no-install-recommends jq curl tar xz-utils
 
     if [[ "$VERSION" == "latest" || -z "$VERSION" ]]; then
-      VERSION=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/artempyanykh/marksman/releases/latest | jq -r .tag_name)
+      VERSION=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/artempyanykh/marksman/releases/latest" | jq -r .tag_name)
     fi
 
     IDENTIFIER="marksman-linux-x64"
