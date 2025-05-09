@@ -32,7 +32,7 @@ apt_get_update()
 if ! hx -V &> /dev/null ; then
 	  echo "Installing Helix..."
 		apt_get_update
-	  apt-get -y install --no-install-recommends jq curl tar xz-utils ca-certificates
+	  apt-get -y install --no-install-recommends jq curl tar xz-utils ca-certificates libc6
 
     if [[ "$VERSION" == "latest" ]]; then
       VERSION=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/helix-editor/helix/releases/latest | jq -r .tag_name )
