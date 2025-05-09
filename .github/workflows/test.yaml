@@ -12,7 +12,9 @@ jobs:
       matrix:
         features: [
             "stow",
-            "chrometesting"
+            "chrometesting",
+            "helix",
+            "marksman"
         ]
         baseImage:
           [
@@ -40,6 +42,9 @@ jobs:
       matrix:
         features: [
             "stow",
+            "chrometesting",
+            "helix",
+            "marksman"
         ]
     steps:
       - uses: actions/checkout@v4

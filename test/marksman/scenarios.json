@@ -1,0 +1,10 @@
+{
+    "install_marksman": {
+        "image": "mcr.microsoft.com/devcontainers/base",
+        "features": {
+            "marksman": {
+                "version": "latest"
+            }
+        }
+    }
+}
