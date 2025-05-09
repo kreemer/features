@@ -33,6 +33,8 @@ if ! ./marksman-linux-x64 --version &> /dev/null ; then
 
     if [[ "$VERSION" == "latest" || -z "$VERSION" ]]; then
       echo "Fetching latest version..."
+      RESPONSE=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/artempyanykh/marksman/releases/latest")
+      echo $RESPONSE
       VERSION=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/artempyanykh/marksman/releases/latest" | jq -r .tag_name)
     fi
 
