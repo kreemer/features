@@ -47,7 +47,7 @@ if ! ./marksman-linux-x64 --version &> /dev/null ; then
 
     echo "Downloading marksman from: ${DOWNLOAD_URL}"
 
-    curl -s -L -o "/tmp/${IDENTIFIER_ARCHIVE}" "${DOWNLOAD_URL}"
+    curl -s -L -o "/tmp/${IDENTIFIER}" "${DOWNLOAD_URL}"
     mv "/tmp/${IDENTIFIER}" /usr/local/bin/marksman
     chmod +x /usr/local/bin/marksman
 fi
