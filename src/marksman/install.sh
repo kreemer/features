@@ -29,7 +29,7 @@ apt_get_update()
 if ! ./marksman-linux-x64 --version &> /dev/null ; then
 	  echo "Installing Marksman..."
 		apt_get_update
-	  apt-get -y install --no-install-recommends jq curl tar xz-utils
+	  apt-get -y install --no-install-recommends jq curl tar xz-utils ca-certificates
 
     if [[ "$VERSION" == "latest" || -z "$VERSION" ]]; then
       echo "Fetching latest version..."
