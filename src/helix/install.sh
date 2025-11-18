@@ -28,7 +28,7 @@ apt_get_update()
 }
 
 
-# Insall Hugo if it's missing
+# Insall Helix if it's missing
 if ! hx -V &> /dev/null ; then
 	  echo "Installing Helix..."
 		apt_get_update
@@ -39,7 +39,8 @@ if ! hx -V &> /dev/null ; then
       VERSION=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/helix-editor/helix/releases/latest | jq -r .tag_name )
     fi
 
-    IDENTIFIER="helix-${VERSION}-x86_64-linux"
+    ARCHITECTURE=$(uname -m | sed 's/^arm64$/aarch64/')
+    IDENTIFIER="helix-${VERSION}-${ARCHITECTURE}-linux"
     IDENTIFIER_ARCHIVE="${IDENTIFIER}.tar.xz"
 
     DOWNLOAD_URL=$(curl -s -L -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "https://api.github.com/repos/helix-editor/helix/releases/tags/${VERSION}" | \
