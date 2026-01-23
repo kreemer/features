@@ -16,6 +16,7 @@ jobs:
             helix: ./**/helix/**
             chrometesting: ./**/chrometesting/**
             marksman: ./**/marksman/**
+            devsense: ./**/devsense/**
 
   test:
     needs: [detect-changes]
