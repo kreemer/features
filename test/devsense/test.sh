@@ -6,7 +6,7 @@ set -e
 source dev-container-features-test-lib
 
 # Definition specific tests
-check "version" devsense --version
+check "binary" which devsense-php-ls
 
 # Report result
 reportResults
