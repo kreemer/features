@@ -13,9 +13,9 @@
       "description": "Select or enter a version."
     }
   },
-  "dependsOn": [
-      "ghcr.io/devcontainers/features/node:1"  
-  ],
+  "dependsOn": {
+      "ghcr.io/devcontainers/features/node:1": {}  
+  },
 	"installsAfter": [
       "ghcr.io/devcontainers/features/common-utils"
   ]
