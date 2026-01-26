@@ -1,6 +1,6 @@
 {
     "install_devsense": {
-        "image": "mcr.microsoft.com/devcontainers/base",
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "devsense": {
                 "version": "latest"
