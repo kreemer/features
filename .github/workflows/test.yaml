@@ -14,7 +14,8 @@ jobs:
             "stow",
             "chrometesting",
             "helix",
-            "marksman"
+            "marksman",
+            "devsense"
         ]
         baseImage:
           [
@@ -42,7 +43,8 @@ jobs:
             "stow",
             "chrometesting",
             "helix",
-            "marksman"
+            "marksman",
+            "devsense"
         ]
     steps:
       - uses: actions/checkout@v4

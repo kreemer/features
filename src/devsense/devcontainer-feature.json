@@ -1,0 +1,22 @@
+{
+  "id": "devsense",
+  "version": "1.0.0",
+  "name": "devsense",
+  "documentationURL": "https://github.com/kreemer/features/tree/main/src/devsense",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "latest"
+      ],
+      "default": "latest",
+      "description": "Select or enter a version."
+    }
+  },
+  "dependsOn": {
+      "ghcr.io/devcontainers/features/node:1": {}  
+  },
+	"installsAfter": [
+      "ghcr.io/devcontainers/features/common-utils"
+  ]
+}
