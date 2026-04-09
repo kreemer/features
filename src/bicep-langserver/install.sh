@@ -29,7 +29,12 @@ apt_get_update()
 if ! bicep-langserver --version &> /dev/null ; then
 	  echo "Installing bicep-langserver..."
 		apt_get_update
-    apt-get -y install --no-install-recommends jq curl tar xz-utils ca-certificates libicu-dev unzip dotnet10
+    apt-get -y install --no-install-recommends jq curl tar xz-utils ca-certificates libicu-dev unzip
+
+    curl -L https://dot.net/v1/dotnet-install.sh -o /tmp/dotnet-install.sh
+    chmod +x /tmp/dotnet-install.sh
+    /tmp/dotnet-install.sh -InstallDir /opt/dotnet
+    ln -s /opt/dotnet/dotnet /usr/local/bin/dotnet
 
     if [[ "$VERSION" == "latest" || -z "$VERSION" ]]; then
       echo "Fetching latest version..."
