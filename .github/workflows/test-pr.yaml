@@ -17,6 +17,7 @@ jobs:
             chrometesting: ./**/chrometesting/**
             marksman: ./**/marksman/**
             devsense: ./**/devsense/**
+            bicep-langserver: ./**/bicep-langserver/**
 
   test:
     needs: [detect-changes]

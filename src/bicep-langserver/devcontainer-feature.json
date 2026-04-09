@@ -1,0 +1,19 @@
+{
+  "id": "bicep-langserver",
+  "version": "1.0.0",
+  "name": "Bicep Langserver",
+  "documentationURL": "https://github.com/kreemer/features/tree/main/src/bicep-langserver",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "latest"
+      ],
+      "default": "latest",
+      "description": "Select or enter a version."
+    }
+  },
+	"installsAfter": [
+      "ghcr.io/devcontainers/features/common-utils"
+  ]
+}
