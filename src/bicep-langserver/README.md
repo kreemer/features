@@ -1,5 +1,5 @@
 
-# Marksman (marksman)
+# Bicep Langserver (bicep-langserver)
 
 
 
@@ -7,7 +7,7 @@
 
 ```json
 "features": {
-    "ghcr.io/kreemer/features/marksman:1": {}
+    "ghcr.io/kreemer/features/bicep-langserver:1": {}
 }
 ```
 
@@ -19,7 +19,7 @@
 
 ## About
 
-This feature installs [Marksman](https://github.com/artempyanykh/marksman). 
+This feature installs [bicep-langserver](https://github.com/). 
 
 ## OS Support
 
@@ -30,4 +30,4 @@ This Feature should work on recent versions of Debian/Ubuntu-based distributions
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/kreemer/features/blob/main/src/marksman/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/kreemer/features/blob/main/src/bicep-langserver/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
