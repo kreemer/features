@@ -15,7 +15,8 @@ jobs:
             "chrometesting",
             "helix",
             "marksman",
-            "devsense"
+            "devsense",
+            "bicep-langserver"
         ]
         baseImage:
           [
@@ -43,7 +44,8 @@ jobs:
             "chrometesting",
             "helix",
             "marksman",
-            "devsense"
+            "devsense",
+            "bicep-langserver"
         ]
     steps:
       - uses: actions/checkout@v4
