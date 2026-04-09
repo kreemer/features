@@ -55,7 +55,7 @@ if ! bicep-langserver --version &> /dev/null ; then
 
     mkdir -p "/tmp/bicep-langserver"
     curl -s -L -o "/tmp/bicep-langserver/${IDENTIFIER}" "${DOWNLOAD_URL}"
-    unzip "/tmp/bicep-langserver/${IDENTIFIER}"
+    unzip "/tmp/bicep-langserver/${IDENTIFIER}" -d /tmp/bicep-langserver
     rm "/tmp/bicep-langserver/${IDENTIFIER}"
     mv "/tmp/bicep-langserver" /opt
 

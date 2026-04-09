@@ -6,7 +6,7 @@ set -e
 source dev-container-features-test-lib
 
 # Definition specific tests
-check "version" bicep-langserver --version
+check "version" which bicep-langserver
 
 # Report result
 reportResults
