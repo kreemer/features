@@ -59,7 +59,7 @@ if ! bicep-langserver --version &> /dev/null ; then
     rm "/tmp/bicep-langserver/${IDENTIFIER}"
     mv "/tmp/bicep-langserver" /opt
 
-    echo "#!/usr/bin/env bash\n\nexec dotnet /opt/bicep-langserver/Bicep.LangServer.dll" > /usr/local/bin/bicep-langserver
+    echo -e "#!/usr/bin/env bash\n\nexec dotnet /opt/bicep-langserver/Bicep.LangServer.dll" > /usr/local/bin/bicep-langserver
     chmod +x /usr/local/bin/bicep-langserver
 fi
 
