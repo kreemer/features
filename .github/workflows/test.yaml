@@ -16,7 +16,8 @@ jobs:
             "helix",
             "marksman",
             "devsense",
-            "bicep-langserver"
+            "bicep-langserver",
+            "jdtls"
         ]
         baseImage:
           [
@@ -45,7 +46,8 @@ jobs:
             "helix",
             "marksman",
             "devsense",
-            "bicep-langserver"
+            "bicep-langserver",
+            "jdtls"
         ]
     steps:
       - uses: actions/checkout@v4
