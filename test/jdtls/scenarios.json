@@ -1,0 +1,10 @@
+{
+    "install_jdtls_langserver": {
+        "image": "mcr.microsoft.com/devcontainers/base",
+        "features": {
+            "jdtls": {
+                "version": "latest"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "jdtls",
+  "version": "1.0.0",
+  "name": "JDTLS",
+  "documentationURL": "https://github.com/kreemer/features/tree/main/src/jdtls",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "latest"
+      ],
+      "default": "latest",
+      "description": "Select or enter a version."
+    }
+  },
+	"installsAfter": [
+      "ghcr.io/devcontainers/features/common-utils"
+  ],
+  "dependsOn": {
+    "ghcr.io/devcontainers/features/python:1": {}
+  }
+}
