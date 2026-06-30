@@ -30,10 +30,8 @@ jobs:
         features: ${{ fromJSON(needs.detect-changes.outputs.features) }}
         baseImage:
           [
-            "ubuntu:jammy",
-            "ubuntu:noble",
-            "debian:12",
-            "mcr.microsoft.com/devcontainers/base:ubuntu",
+            "mcr.microsoft.com/devcontainers/base:debian",
+            "mcr.microsoft.com/devcontainers/base:ubuntu"
           ]
     steps:
       - uses: actions/checkout@v4
