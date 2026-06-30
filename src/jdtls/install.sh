@@ -33,7 +33,7 @@ if ! which jdtls &> /dev/null ; then
 
     if [[ "$VERSION" == "latest" || -z "$VERSION" ]]; then
       echo "Using last known published version..."
-      VERSION="1.58.0"
+      VERSION="1.60.0"
     fi
 
     DOWNLOAD_FILE=$(curl -s -L "https://download.eclipse.org/jdtls/milestones/${VERSION}/latest.txt")
