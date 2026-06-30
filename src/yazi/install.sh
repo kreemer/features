@@ -59,6 +59,7 @@ if ! yazi -V &> /dev/null ; then
     unzip "${IDENTIFIER_ARCHIVE}"
     mv "/tmp/${IDENTIFIER}" /opt/yazi
     ln -s /opt/yazi/yazi /usr/local/bin/yazi
+    ln -s /opt/yazi/ya /usr/local/bin/ya
 
     rm -f "/tmp/${IDENTIFIER_ARCHIVE}"
 fi
