@@ -32,7 +32,7 @@ apt_get_update()
 if ! yazi -V &> /dev/null ; then
 	  echo "Installing Yazi..."
 		apt_get_update
-	  apt-get -y install --no-install-recommends jq curl unzip xz-utils ca-certificates libc6 
+	  apt-get -y install --no-install-recommends jq curl unzip xz-utils ca-certificates libc6 file ffmpeg 7zip poppler-utils fd-find ripgrep fzf zoxide imagemagick
 
     if [[ "$VERSION" == "latest" || -z "$VERSION" ]]; then
       echo "Fetching latest version..."
