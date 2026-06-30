@@ -1,0 +1,10 @@
+{
+    "install_yazi": {
+        "image": "mcr.microsoft.com/devcontainers/base",
+        "features": {
+            "yazi": {
+                "version": "latest"
+            }
+        }
+    }
+}

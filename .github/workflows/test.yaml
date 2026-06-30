@@ -17,7 +17,8 @@ jobs:
             "marksman",
             "devsense",
             "bicep-langserver",
-            "jdtls"
+            "jdtls",
+            "yazi"
         ]
         baseImage:
           [
@@ -47,7 +48,8 @@ jobs:
             "marksman",
             "devsense",
             "bicep-langserver",
-            "jdtls"
+            "jdtls",
+            "yazi"
         ]
     steps:
       - uses: actions/checkout@v4
