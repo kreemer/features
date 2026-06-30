@@ -9,3 +9,4 @@ This repository contains features to use within a devcontainer. Currently follow
 - [marksman](https://github.com/kreemer/features/blob/main/src/marksman/README.md)
 - [bicep-langserver](https://github.com/kreemer/features/blob/main/src/bicep-langserver/README.md)
 - [jdtls](https://github.com/kreemer/features/blob/main/src/jdtls/README.md)
+- [yazi](https://github.com/kreemer/features/blob/main/src/yazi/README.md)

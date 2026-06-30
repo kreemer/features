@@ -19,6 +19,7 @@ jobs:
             devsense: ./**/devsense/**
             bicep-langserver: ./**/bicep-langserver/**
             jdtls: ./**/jdtls/**
+            yazi: ./**/yazi/**
 
   test:
     needs: [detect-changes]
